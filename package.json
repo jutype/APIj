@@ -1,0 +1,12 @@
+{
+  "name": "api-codigos-postales",
+  "version": "1.0.0",
+  "description": "API para consultar el servicio de un código postal (urbano o flash)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 
