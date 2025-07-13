@@ -20,5 +20,5 @@ app.get('/servicio/:codigo_postal', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`API escuchando en http://localhost:${PORT}`);
+  console.log(`API escuchando en https://jutype.github.io/APIj/:${PORT}`);
 }); 
