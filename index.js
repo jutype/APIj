@@ -10,15 +10,17 @@ app.get('/servicio/:codigo_postal', (req, res) => {
   const codigo = req.params.codigo_postal;
   let servicio = null;
 
-  if (codigos.urbano.includes(codigo)) {
-    servicio = 'urbano';
+  if (codigos.flash.includes(codigo) && codigos.urbano.includes(codigo)) {
+    servicio = 'Flash'; 
   } else if (codigos.flash.includes(codigo)) {
     servicio = 'flash';
+  } else if (codigos.urbano.includes(codigo)) {
+    servicio = 'urbano';
   }
 
   res.json({ servicio });
 });
 
 app.listen(PORT, () => {
-  console.log(`API escuchando en https://jutype.github.io/APIj/:${PORT}`);
-}); 
+  console.log(`API escuchando en http://localhost:${PORT}`);
+});
